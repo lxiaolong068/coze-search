@@ -1,7 +1,6 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const port = 3000; // Server will listen on this port
 
 app.use(express.json()); // Middleware to parse JSON bodies
 
@@ -37,6 +36,4 @@ app.post('/api/query', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
+export default app;
