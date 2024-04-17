@@ -8,6 +8,10 @@
 	],
 	"routes": [
 		{
+			"src": "/api/query",
+			"dest": "index.js"
+		},
+		{
 			"src": "/(.*)",
 			"dest": "index.js"
 		}
