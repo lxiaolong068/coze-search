@@ -9,6 +9,10 @@ const personalAccessToken = "pat_5hOcaSVfwrK6mmiEORD1kzQlMZVZbFjwbKqPEeAtpWYofKN
 const botId = "7347668210487476225"; // Replace with your Bot ID
 const userId = "29032201862555"; // Replace with the user ID
 
+app.get("/", function (req, res) {
+    return res.status(200).send("hello")
+})
+
 app.post('/api/query', async (req, res) => {
     const userQuery = req.body.query;
 
@@ -34,6 +38,6 @@ app.post('/api/query', async (req, res) => {
         console.error('Error during HTTP request:', error.message);
         res.status(500).send({ message: 'Failed to process the query', error: error.message });
     }
-});
+})
 
-export default app;
+app.listen(8000)
